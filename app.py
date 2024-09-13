@@ -12,7 +12,7 @@ def connect_to_db():
     )
     return conn
 
-# Fetch data from PostgreSQL
+
 def fetch_table_data():
     conn = connect_to_db()
     query = "SELECT * FROM sales"  # Use your table name
@@ -20,7 +20,7 @@ def fetch_table_data():
     conn.close()
     return df
 
-# Insert data into PostgreSQL
+
 def insert_into_table(new_row):
     conn = connect_to_db()
     cursor = conn.cursor()
@@ -40,7 +40,7 @@ def insert_into_table(new_row):
     cursor.close()
     conn.close()
 
-# Update data in PostgreSQL
+
 def update_table(row_id, updated_row):
     conn = connect_to_db()
     cursor = conn.cursor()
